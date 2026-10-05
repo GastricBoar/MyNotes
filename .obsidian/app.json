@@ -1,0 +1,15 @@
+{
+  "showInlineTitle": false,
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "Utilities/Media",
+  "newFileLocation": "current",
+  "promptDelete": false,
+  "pdfExportSettings": {
+    "includeName": false,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "2",
+    "downscalePercent": 90
+  },
+  "spellcheck": false
+}
