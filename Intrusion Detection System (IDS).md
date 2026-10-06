@@ -37,3 +37,4 @@ Classificati in base a ciò che monitorano:
 È diverso in quello che succede dopo aver rilevato la minaccia: se l'IDS rileva e segnala l'attività sospetta, l'IPS può sia rilevarla che intervenire automaticamente per bloccarla.
 
 ---
+[[Intrusion Prevention System (IPS)]]

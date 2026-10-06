@@ -36,7 +36,7 @@ Il router è l'[usciere](https://www.youtube.com/watch?v=q0c4Zmsd6fo) della tua 
 ### I router più utilizzati
 A seconda del contesto in cui vengono usati:
 
-- **In ambito enterprise:** Cisco ISR, Cisco Catalyst 8000, Juniper MX Series, Arista 7000 Series.
+- **In ambito enterprise:** Cisco ISR (Integrated Service Router), Cisco Catalyst 8000, Juniper MX Series, Arista 7000 Series.
   
 - **In ambito data center:** Cisco Nexus, Juniper MX Series, Arista 7000 Series.
 
@@ -53,3 +53,4 @@ Qui c'è una differenza rispetto agli switch: FortiGate, Meraki MX e UniFi Gatew
 [[MAC address]]
 [[Internet]]
 [[Indirizzo IP (Internet Protocol)]]
+

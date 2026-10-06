@@ -35,6 +35,17 @@ I firewall possono essere distinti anche in base a dove vengono installati e qua
 
 - **I firewall network-based** controllano il traffico in entrata e in uscita da un'intera rete, può essere hardware o software; è più complesso da configurare, ma ti offre un controllo globale.
 
+### I firewall più utilizzati
+A seconda del contesto in cui vengono usati:
+
+- **In ambito enterprise:** Palo Alto Networks, Fortinet FortiGate, Check Point Quantum, Cisco Secure Firewall.
+  
+- **In ambito data center:** Palo Alto Networks, Fortinet FortiGate, Cisco Secure Firewall, Check Point Quantum.
+  
+- **In ambito PMI e Prosumer:** Fortinet FortiGate, Sophos Firewall, Ubiquiti UniFi Gateway, OPNsense.
+  
+- **In ambito domestico o Plug & Play:** pfSense, OPNsense, Ubiquiti UniFi Gateway, TP-Link Omada.
+
 ---
 [[Router]]
 [[Switch]]
