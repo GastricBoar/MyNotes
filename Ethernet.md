@@ -18,4 +18,4 @@ Queste regole definiscono tante cose, vediamone alcune:
 - **Di quali cavi ho bisogno per poter comunicare a una certa velocità?** ogni versione di ethernet deve essere accompagnata dalla giusta attrezzatura, questo si riflette anche in [[Cavi e connettori nel networking]].
 
 ***
-
+[[Standard]]

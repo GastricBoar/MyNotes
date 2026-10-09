@@ -63,7 +63,7 @@ A seconda del contesto in cui vengono usati:
 [[Router]]
 [[Ethernet]]
 [Testare porte su uno switch utilizzando un loopback plug]([[Loopback plug]])
-[[Cavo Ethernet]]
+[[Cavo Ethernet (su rame)]]
 [[Patch panel]]
 [[Hub]]
 [[MAC address]]

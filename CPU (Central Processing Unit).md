@@ -28,7 +28,7 @@ Per rendere più veloce la CPU si può aumentare la velocità del clock, aggiung
 
 Adesso, al netto dell'esempio questi concetti nella pratica si traducono in:
 
-- [[Bit]]
+- [[Bit (Binary digit)]]
 
 - [[Machine language]]
 

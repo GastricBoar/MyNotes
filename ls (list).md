@@ -40,6 +40,6 @@ ls -ld   # info sulla directory, non sul contenuto
 ```
 
 ---
-[[Bit]]
+[[Bit (Binary digit)]]
 [[Hard link]]
 [[inode (index node)]]

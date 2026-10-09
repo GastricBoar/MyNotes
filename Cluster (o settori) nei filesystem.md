@@ -23,8 +23,4 @@ Dipende, ma ci son due attori principali nella scelta:
 
 Come hai visto sono rimasti 2 KB di scarto, e ti starai chiedendo "allora perchè non possiamo fare cluster da 1 KB per evitare scarto?"; la risposta è che così facendo avresti molti più cluster da gestire, con aumento di operazioni in lettura e memoria usata. Qui il gioco consiste nel trovare un buon compromesso tra efficienza dello spazio e overhead di gestione chiesto al filesystem.
 
-
-
-
-
 ---

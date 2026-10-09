@@ -81,11 +81,7 @@ Il sistema operativo cerca il primo cluster libero, quindi parte dal cluster ABB
 ### Come viene eliminato un file?
 Quando elimini un file, il primo byte del nome viene cambiato in E5 (hex), e i suoi cluster marcati come liberi con 0000; sono ancora lì fisicamente, ma in attesa di esser sovrascritti quando ce ne sarà bisogno.
 
-
-
-
-
 ---
 [[Formattazione]]
-[[Bit]]
+[[Bit (Binary digit)]]
 [[Frammentazione]]

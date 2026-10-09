@@ -4,9 +4,9 @@ tags:
   - informatica
   - pubblico
 ---
-# Cavo Ethernet
+# Cavo Ethernet (su rame)
 ---
-Cavo fisico utilizzato per collegare tra loro i dispositivi di una rete locale (LAN).
+Cavo in rame utilizzato per collegare tra loro i dispositivi di una rete locale (LAN).
 
 ### Come funziona?
 Due dispositivi collegati da un cavo Ethernet comunicano tramite segnali elettrici.

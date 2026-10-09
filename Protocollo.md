@@ -7,15 +7,23 @@ tags:
 ---
 # Protocollo
 ***
-Un protocollo è un insieme di regole che definiscono come sistemi o dispositivi possono comunicare tra loro. 
+Un protocollo è un insieme di regole che definiscono come sistemi o dispositivi possono comunicare tra loro usando un linguaggio comune.
 
-Per fare un esempio tra tanti: il [[TCP (Transmission Control Protocol)]] è un protocollo.
+Per fare un esempio tra tanti: il TCP è un protocollo.
 
-Non deve essere confuso con uno [[Standard]], è diverso.
+### In che modo è diverso da uno standard?
+Uno standard è formalizzato da un'organizzazione ufficiale ed è un insieme più ampio di regole, che può includere anche dei protocolli al suo interno.
 
-![Pasted image 20250116122233.png](Utilities/Media/Pasted%20image%2020250116122233.png)
+Una tabella:
 
-Come vedi, uno standard è formalizzato da un'organizzazione ufficiale ed è un insieme più ampio di regole, che può includere anche dei protocolli al suo interno.
+| Aspetto        | Protocollo                                                  | Standard                                         |
+| -------------- | ----------------------------------------------------------- | ------------------------------------------------ |
+| Definizione    | Insieme di regole per la comunicazione.                     | Linee guida formali per implementare tecnologie. |
+| Portata        | Si concentra su un aspetto specifico (es. dati, sicurezza). | Copre un'intera tecnologia o sistema.            |
+| Approccio      | Operativo e tecnico.                                        | Strutturale e normativo.                         |
+| Organizzazione | Creato da esperti o comunità.                               | Formalizzato da enti come IEEE, ISO, IETF, ecc.  |
+| Esempio        | TCP/IP, HTTP, FTP.                                          | IEEE 802.11, ISO 27001, USB.                     |
 
 ***
-
+[[TCP (Transport Control Protocol)]]
+[[Standard]]

@@ -31,7 +31,7 @@ In questo output ci vedi un paio di colonne interessanti:
   
 - **RM:** sta per "removable" e indica se il disco è rimovibile secondo il kernel; lo zero è un no, mentre l'uno è un sì. Non è sempre attendibile al 100% perchè una USB potrebbe essere classificata come non rimovibile.
   
-- **SIZE:** la dimensione del disco, quella effettiva e non quella commerciale (vedi [[KB e KiB (Kilobyte e Kibibyte)]]).
+- **SIZE:** la dimensione del disco in fattore binario, non quella commerciale (vedi [[Byte]]).
 
 - **RO:** sta per "read-only" e se sta a zero vuol dire che è scrivibile, se sta a uno vuol dire che è in sola lettura.
   

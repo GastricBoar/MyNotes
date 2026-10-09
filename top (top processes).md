@@ -78,7 +78,7 @@ Tasks: 441 total, 1 running, 440 sleeping, 0 d-sleep, 0 stopped, 0 zombie
 MiB Mem : 31634,2 total, 641,3 free, 11970,3 used, 19505,4 buff/cache
 ```
 
-- `MiB Mem` indica la quantità di RAM in Mebibyte (1024 x 1024 byte invece che 1000 x 1000 come nei MB); se vuoi approfondire, leggi [[KB e KiB (Kilobyte e Kibibyte)]]
+- `MiB Mem` indica la quantità di RAM in Mebibyte (1024 x 1024 byte invece che 1000 x 1000 come nei MB); se vuoi approfondire, leggi [[Byte]].
   
 - `31634,2 total` è la RAM totale disponibile a sistema.
   
