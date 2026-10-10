@@ -19,4 +19,4 @@ A differenza di altre tecnologie come le connessioni [[DSL (Digital Subscriber L
 Sì, ed è più conveniente, ma gli ISP richiedono tu faccia delle cose in più tipo registrare il [[MAC address]] del tuo nuovo modem su pannello di configurazione web oppure registrarlo tramite una chiamata telefonica; quello che potresti fare è inserire un MAC address custom, ricopiando quello del modem fornito dal tuo ISP. Senza questo passaggio, non sarai in grado di collegarti a Internet.
 
 ---
-[[Cavi e connettori nel networking]]
+[[Cavo Ethernet]]

@@ -9,7 +9,7 @@ tags:
 ***
 Un patch panel è un dispositivo passivo usato per organizzare e connettere cavi all'interno di reti informatiche ([[LAN (Local Area Network)]]).
 
-Visivamente è un pannello con davanti una serie di prese RJ45 e dietro una sezione dedicata al cablaggio di cavi Ethernet ([[Cavi e connettori nel networking]]). 
+Visivamente è un pannello con davanti una serie di prese RJ45 e dietro una sezione dedicata al cablaggio di cavi Ethernet ([[Cavo Ethernet]]). 
 
 ![100-728-cropped-front-and-rear_800px.jpg](Utilities/Media/100-728-cropped-front-and-rear_800px.jpg)
 
@@ -38,7 +38,7 @@ Qui ci viene in aiuto un **patch panel**:
 
 Un patch panel viene chiamato "passivo" perchè di per sè si occupa solo di collegare hardware di vario tipo, ma non ha alcun tipo di ruolo intelligente in tutto ciò (a differenza di uno [[Switch]]).
 
-I cavi che passano attraverso il muro devono essere particolarmente resistenti, per questo vengono usati dei cavi Ethernet solid core e non stranded. ([[Cavi e connettori nel networking]])
+I cavi che passano attraverso il muro devono essere particolarmente resistenti, per questo vengono usati dei cavi Ethernet solid core e non stranded. ([[Cavo Ethernet]])
 
 ##### **Ma come faccio a verificare che tutto funzioni e sia ben collegato?**
 Ci sono degli strumenti appositi: 

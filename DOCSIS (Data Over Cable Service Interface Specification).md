@@ -12,4 +12,4 @@ Il [[Protocollo]] che permette di veicolare una connessione a [[Internet]] attra
 Viene sfruttata con [[Internet via cavo (cable Internet)]].
 
 ---
-[[Cavi e connettori nel networking]]
+[[Cavo Ethernet]]

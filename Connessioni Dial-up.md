@@ -37,6 +37,6 @@ Ovviamente si son succeduti diversi tipi di modem nel tempo, tutti con velocità
 Tutti i modem facevano un rumoraccio in fase di connessione al modem dell'ISP, a causa dell'handshake in corso tra i due dispositivi.
 
 ---
-[[Cavi e connettori nel networking]]
+[[Cavo Ethernet]]
 
 [Connecting to the internet in 2023 using a US Robotics 56k Fax Modem!](https://www.youtube.com/watch?v=KLUFvQe7D5A)

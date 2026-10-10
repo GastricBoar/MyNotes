@@ -15,7 +15,7 @@ Queste regole definiscono tante cose, vediamone alcune:
   
 - **Come identifico ciascun host all'interno di una LAN?** tramite un indirizzo univoco, il [[MAC address]].
   
-- **Di quali cavi ho bisogno per poter comunicare a una certa velocità?** ogni versione di ethernet deve essere accompagnata dalla giusta attrezzatura, questo si riflette anche in [[Cavi e connettori nel networking]].
+- **Di quali cavi ho bisogno per poter comunicare a una certa velocità?** ogni versione di ethernet deve essere accompagnata dalla giusta attrezzatura, questo si riflette anche in [[Cavo Ethernet]].
 
 ***
 [[Standard]]
