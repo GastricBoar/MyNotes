@@ -25,7 +25,7 @@ Intrecciare i fili di rame (twisted pair/doppino intrecciato) protegge il segnal
 ### Schermatura del cavo
 Un cavo lo schermi con uno strato conduttivo che protegge il segnale dalle interferenze; in base alla presenza o alla disposizione di questo strato, i cavi a doppino intrecciato si dividono in più tipologie:
 
-- **Unshielded Twisted Pair (UTP):** non è schermato, i singoli fili di rame sono avvolti da una guaina di materiale isolante (tipicamente plastica, isolante significa che non conduce corrente, non che lo schermi nulla) e poi racchiusi in una guaina esterna.
+- **Unshielded Twisted Pair (UTP):** non è schermato, i singoli fili di rame sono avvolti da una guaina di materiale isolante (tipicamente plastica, isolante significa che non conduce corrente, non che schermi nulla) e poi racchiusi in una guaina esterna.
   
 - **Shielded Twisted Pair (STP):** schermato, tra i fili di rame avvolti dalla guaina e l'esterno del cavo ci sta uno strato di schermatura a proteggerlo da interferenze:
 
@@ -61,25 +61,9 @@ Un cavo Ethernet non usa sempre tutti e 8 i fili di rame, per esempio nelle reti
   
 - **Pin 3 e 6:** usati per ricevere dati (Rx, che sta per "Receive").
 
-I PIN 4, 5, 7 e 8 nelle reti a 100 Mbps rimangono inutilizzati, ma vengono usati tutti e 8 in reti Gigabit (da 1000 Mbps) o per alimentare dispositivi via PoE.
+I PIN 4, 5, 7 e 8 nelle reti a 100 Mbps rimangono inutilizzati, ma vengono usati tutti e 8 in reti Gigabit (da 1000 Mbps) o per alimentare dispositivi via PoE. In un collegamento a 1Gbps vengono usate tutte le coppie, che trasmettono e ricevono allo stesso tempo (full duplex).
 
 <img src="Utilities/Media/Pasted%20image%2020260923205130.png" alt="Pasted image 20260923205130.png" width="463">
-
-### Tipi di porte di rete
-Le porte RJ45 sui dispositivi di rete si dividono in due categorie, in base a come sono collegati internamente i loro circuiti elettronici.
-
-- **Porte MDI (Medium Dependent Interface):** su PC, server e router; usano i pin 1 e 2 per trasmettere, e i pin 3 e 6 per ricevere.
-  
-- **Porte MDI-X (Medium Dependent Interface Crossover):** su switch e hub; hanno i circuiti invertiti di fabbrica, quindi usano i pin 1 e 2 per ricevere e i pin 3 e 6 per trasmettere.
-
-Si chiama Medium Dependent Interface perché l'interfaccia fisica (la porta) è progettata per dipendere dalle caratteristiche del mezzo di trasmissione (il cavo), adattando la propria elettronica per ricevere e inviare segnali elettrici dai pin del connettore.
-
-Tieni a mente che al giorno d'oggi questa distinzione fisica è diventata quasi irrilevante grazie all'Auto-MDIX (Automatic Medium-Dependent Interface Crossover): 
-
-- è una tecnologia integrata in quasi tutte le schede di rete moderne che rileva automaticamente il tipo di cavo collegato e la disposizione dei pin dell'altro dispositivo.
-- Se rileva che la trasmissione e la ricezione sono errate, fa in modo che la porta riassegni via software la funzione dei pin, in tempo reale.
-
-È comunque importante a livello di teoria delle reti conoscere la differenza tra porte di rete di vario tipo.
 
 ### Tipi di cavo
 Due tipi principali di cavo Ethernet, in base a come sono connessi ai PIN i fili di rame interni:
@@ -137,6 +121,26 @@ Categorie che classificano la prestazione dei cavi su indici come velocità, dis
 
 Questi dati li trovi sulla scatola del cavo, ma attenzione: i furbi furbi venditori potrebbero utilizzare un loro sistema interno di CAT che non corrisponde in maniera diretta alle vere diciture CAT, es. il CAT 6e di una certa compagnia di cavi potrebbe corrispondere al CAT 6 dello standard internazionale, quindi è compito tuo tradurre l'indice del venditore nel suo corrispettivo internazionale.
 
+### Standard Ethernet su rame
+Uno standard è un insieme di specifiche tecniche che definisce il modo in cui una certa tecnologia deve funzionare. Nel caso degli standard Ethernet su rame, definisce il modo in cui avviene la trasmissione dei dati a una certa velocità: ti dice quale cavo usi, quale è la distanza massima supportata, quali caratteristiche deve avere il collegamento per funzionare correttamente.
+
+Per fare qualche esempio ecco una tabella:
+
+| Velocità | Nome comune         | Standard IEEE | Denominazione tecnica | Lunghezza massima | Pin utilizzati su connettore |
+| -------- | ------------------- | ------------- | --------------------- | ----------------- | ---------------------------- |
+| 10 Mbps  | Ethernet            | IEEE 802.3i   | 10BASE-T              | 100 metri         | 4 (1, 2, 3, 6)               |
+| 100 Mbps | Fast Ethernet       | IEEE 802.3u   | 100BASE-TX            | 100 metri         | 4 (1, 2, 3, 6)               |
+| 1 Gbps   | Gigabit Ethernet    | IEEE 802.3ab  | 1000BASE-T            | 100 metri         | 8 (1–8)                      |
+| 10 Gbps  | 10 Gigabit Ethernet | IEEE 802.3an  | 10GBASE-T             | 100 metri         | 8 (1–8)                      |
+
+Quella denominazione tecnica la distingui in tre parti:
+
+- **1000:** è la velocità di trasmissione.
+- **BASE:** trasmissione in banda base, approfondisci se vuoi e confronta le differenze con la trasmissione a banda passante.
+- **T:** utilizza un cavo a doppino intrecciato in rame (quindi twisted pair).
+
+Da qui viene che 1000BASE-T è un collegamento che trasmette dati a 1Gbps su cavo a doppino intrecciato in rame.
+
 ### Il plenum rating
 Questo è lo standard di classificazione che definisce la resistenza al fuoco del cavo:
 
@@ -154,3 +158,4 @@ Un "plenum" è un controsoffitto, mentre un "riser" è un contropavimento.
 [[Router]]
 [[Switch]]
 [[RJ (Registered Jack)]]
+[[Porta di rete Ethernet (su rame)]]
