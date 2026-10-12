@@ -11,6 +11,16 @@ Cavo utilizzato per collegare tra loro dispositivi di rete, tramite impulsi lumi
 ### Come funziona?
 Una fibra ottica è un sottilissimo filo di vetro o plastica, un cavo in fibra ottica sfrutta la rifrazione della luce all'interno di questo tubicino per propagare un segnale; se vuoi saperne di più, guardati [questo video di Linus](https://www.youtube.com/watch?v=G1Ke-H8I1uk&pp=ugMICgJpdBABGAHKBRFsaW51cyBvcHRpYyBmaWJlcg%3D%3D).
 
+Internamente è diviso in strati:
+
+- **Il core:** lo strato più interno che trasporta la luce, in vetro o plastica.
+- **Il cladding:** circonda il core e mantiene la luce al suo interno riflettendola.
+- **Lo strato protettivo (buffer):** protegge la fibra dai danni fisici.
+- **La guaina esterna:** protegge il cavo dall'ambiente esterno.
+
+<img src="Utilities/Media/9d12b9f32d642cf3e309987010c531c79ee8a05f.jpg" alt="9d12b9f32d642cf3e309987010c531c79ee8a05f.jpg" width="474">
+
+
 ### Tipi di fibre ottiche
 Le distingui in base al diametro del nucleo e alle modalità con cui la luce si propaga al suo interno: multimodale (multimode) e monomodale (single-mode).
 
@@ -36,3 +46,4 @@ Specificatamente progettati per essere interrati, vedi [[Cavo Direct-Buried (DBC
 ---
 [[Cavo Ethernet (su rame)]]
 [[Cavo Ethernet (coassiale)]]
+[[SFP (Small Form-factor Pluggable)]]
