@@ -122,9 +122,7 @@ Categorie che classificano la prestazione dei cavi su indici come velocità, dis
 Questi dati li trovi sulla scatola del cavo, ma attenzione: i furbi furbi venditori potrebbero utilizzare un loro sistema interno di CAT che non corrisponde in maniera diretta alle vere diciture CAT, es. il CAT 6e di una certa compagnia di cavi potrebbe corrispondere al CAT 6 dello standard internazionale, quindi è compito tuo tradurre l'indice del venditore nel suo corrispettivo internazionale.
 
 ### Standard Ethernet su rame
-Uno standard è un insieme di specifiche tecniche che definisce il modo in cui una certa tecnologia deve funzionare. Nel caso degli standard Ethernet su rame, definisce il modo in cui avviene la trasmissione dei dati a una certa velocità: ti dice quale cavo usi, quale è la distanza massima supportata, quali caratteristiche deve avere il collegamento per funzionare correttamente.
-
-Per fare qualche esempio ecco una tabella:
+Qui una tabella:
 
 | Velocità | Nome comune         | Standard IEEE | Denominazione tecnica | Lunghezza massima | Pin utilizzati su connettore |
 | -------- | ------------------- | ------------- | --------------------- | ----------------- | ---------------------------- |
