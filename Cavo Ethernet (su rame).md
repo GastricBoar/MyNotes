@@ -29,7 +29,9 @@ Un cavo lo schermi con uno strato conduttivo che protegge il segnale dalle inter
   
 - **Shielded Twisted Pair (STP):** schermato, tra i fili di rame avvolti dalla guaina e l'esterno del cavo ci sta uno strato di schermatura a proteggerlo da interferenze:
 
-<img src="Utilities/Media/Pasted%20image%2020261011223209.png" alt="Pasted image 20261011223209.png" width="370">
+<img src="Utilities/Media/Pasted%20image%2020261011223209.png" alt="Pasted image 20261011223209.png" width="285">
+
+Se vuoi conoscere una chicca in sicurezza delle comunicazioni, vedi [[Intercettazioni TEMPEST]].
 
 ### Tipi di conduttore
 Il rame all'interno di ciascun doppino può essere predisposto in maniera diversa a seconda dell'utilizzo che ne si fa:
@@ -38,7 +40,7 @@ Il rame all'interno di ciascun doppino può essere predisposto in maniera divers
   
 - **Cavi solid core:** dentro al doppino c'è un filo di rame duro e puro, tutto d'un pezzo. È molto resistente e si rompe con meno probabilità, è utile a scenari in cui il cavo si muove poco, es. un cavo che da uno [[Switch]] passa attraverso i muri e arriva a un [[Patch panel]].
 
-<img src="Utilities/Media/Pasted%20image%2020261011224154.png" alt="Pasted image 20261011224154.png" width="479">
+<img src="Utilities/Media/Pasted%20image%2020261011224154.png" alt="Pasted image 20261011224154.png" width="417">
 
 ### Cavi Direct-buried (DBC)
 Specificatamente progettati per essere interrati, vedi [[Cavo Direct-Buried (DBC)]].
@@ -149,6 +151,8 @@ Questo è lo standard di classificazione che definisce la resistenza al fuoco de
 - **Cavi Plenum-Rated (CMP):** progettati per controsoffitti, offrono maggiore resistenza alla propagazione del fuoco e limitano la produzione di fumi, sono generalmente più costosi.
 
 Un "plenum" è un controsoffitto, mentre un "riser" è un contropavimento. 
+
+
 
 ---
 [[Ethernet]]

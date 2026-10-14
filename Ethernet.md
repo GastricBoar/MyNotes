@@ -17,5 +17,8 @@ Queste regole definiscono tante cose, vediamone alcune:
   
 - **Di quali cavi ho bisogno per poter comunicare a una certa velocità?** ogni versione di ethernet deve essere accompagnata dalla giusta attrezzatura, questo si riflette anche in [[Cavo Ethernet]].
 
+È stato definito nello standard IEEE 802.3.
+
 ***
 [[Standard]]
+[[IEEE (Institute of Electrical and Electronics Engineers)]]
