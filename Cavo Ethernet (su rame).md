@@ -63,7 +63,11 @@ Un cavo Ethernet non usa sempre tutti e 8 i fili di rame, per esempio nelle reti
   
 - **Pin 3 e 6:** usati per ricevere dati (Rx, che sta per "Receive").
 
-I PIN 4, 5, 7 e 8 nelle reti a 100 Mbps rimangono inutilizzati, ma vengono usati tutti e 8 in reti Gigabit (da 1000 Mbps) o per alimentare dispositivi via PoE. In un collegamento a 1Gbps vengono usate tutte le coppie, che trasmettono e ricevono allo stesso tempo (full duplex).
+I PIN 4, 5, 7 e 8 nelle reti a 100 Mbps rimangono inutilizzati, ma vengono usati tutti e 8 in reti Gigabit (da 1000 Mbps) o per alimentare dispositivi via PoE.
+
+In reti da almeno 1000 Mbps vengono usati i pin nelle seguenti coppie: 1-2, 3-6, 4-5, 7-8.
+
+In un collegamento a 1Gbps vengono usate tutte le coppie, che trasmettono e ricevono allo stesso tempo (full duplex).
 
 <img src="Utilities/Media/Pasted%20image%2020260923205130.png" alt="Pasted image 20260923205130.png" width="463">
 
