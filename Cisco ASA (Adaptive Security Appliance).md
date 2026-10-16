@@ -4,7 +4,7 @@ tags:
   - informatica
   - pubblico
 ---
-# CIsco ASA (Adaptive Security Appliance)
+# Cisco ASA (Adaptive Security Appliance)
 ---
 Firewall Cisco (_Adaptive Security Appliance_) progettato per proteggere le reti aziendali, controlla il traffico in ingresso e in uscita applicando regole di sicurezza, filtraggio delle connessioni e funzionalità VPN.
 
