@@ -9,7 +9,7 @@ tags:
 ***
 Un protocollo è un insieme di regole che definiscono come sistemi o dispositivi possono comunicare tra loro usando un linguaggio comune.
 
-Per fare un esempio tra tanti: il TCP è un protocollo.
+Per fare un esempio tra tanti: il TCP è un protocollo. In passato, molti erano proprietari e sviluppati dai singoli produttori, rendendo difficile la comunicazione tra dispositivi di marche diverse. Da qui è nata l'esigenza di adottare protocolli standardizzati.
 
 ### In che modo è diverso da uno standard?
 Uno standard è formalizzato da un'organizzazione ufficiale ed è un insieme più ampio di regole, che può includere anche dei protocolli al suo interno.
