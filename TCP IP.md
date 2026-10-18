@@ -5,7 +5,7 @@ tags:
   - pubblico
 
 ---
-# TCP/IP (TCP over IP)
+# TCP/IP
 ***
 È un insieme di protocolli che lavorano assieme per permettere a reti diverse di comunicare tra loro, è su questi processi che si basa la comunicazione su internet o [[LAN (Local Area Network)]] di vario tipo.
 

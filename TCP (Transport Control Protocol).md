@@ -7,7 +7,7 @@ tags:
 ---
 # TCP (Transport Control Protocol)
 ***
-Un [[Protocollo]] di rete, viene utilizzato per trasmettere dati nell'insieme di protocolli [[TCP IP (TCP over IP)]]. 
+Un [[Protocollo]] di rete, viene utilizzato per trasmettere dati nell'insieme di protocolli [[TCP IP]]. 
 
 Il TCP garantisce una comunicazione affidabile tra due dispositivi; perchè chiamarla affidabile? perchè si assicura che i dati inviati dal mittente arrivino al destinatario in maniera corretta anche in presenza di problemi di rete.
 
