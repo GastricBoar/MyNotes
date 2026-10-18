@@ -27,7 +27,7 @@ Questa rete utilizza la commutazione di pacchetto e il protocollo NCP (Network C
 
 ARPANET entra in funzione nel 1969: viene trasmesso il primo messaggio tra un computer dell'UCLA (University of California, Los Angeles) e uno dello Stanford Research Institute; si trattava di una singola parola, "LOGIN", di cui però arrivano solo due lettere, "LO". Il collegamento fu stabilito con successo poco dopo, ed entro la fine dell'anno la rete collegava già quattro nodi.
 
-![[Pasted image 20261019161834.png]]
+![Pasted image 20261019161834.png](Utilities/Media/Pasted%20image%2020261019161834.png)
 
 
 ### La nascita di Internet

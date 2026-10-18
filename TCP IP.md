@@ -15,6 +15,6 @@ Il nome confonde molto, perchè il TCP è solo uno dei tanti protocolli di rete 
 
 Quello che devi capire è che il protocollo TCP mette assieme i pacchetti in un certo modo, mentre il protocollo IP li trasporta su internet come fosse un camioncino delle consegne.
 ***
-[[TCP (Transport Control Protocol)]]
+[[TCP (Transmission Control Protocol)]]
 [[UDP (User Datagram Protocol)]]
 [[ICMP (Internet Control Message Protocol)]]

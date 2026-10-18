@@ -25,5 +25,5 @@ Una tabella:
 | Esempio        | TCP/IP, HTTP, FTP.                                          | IEEE 802.11, ISO 27001, USB.                     |
 
 ***
-[[TCP (Transport Control Protocol)]]
+[[TCP (Transmission Control Protocol)]]
 [[Standard]]
