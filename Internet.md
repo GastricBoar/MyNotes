@@ -50,4 +50,4 @@ Negli anni '90 Internet si diffonde rapidamente al di fuori degli ambienti milit
 [[Packet switching]]
 [[DARPA (Defense Advanced Research Projects Agency)]]
 [[ARPANET]]
-[[TCP IP]]
+[[Suite TCP IP]]

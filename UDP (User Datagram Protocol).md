@@ -7,7 +7,7 @@ tags:
 ---
 # UDP (User Datagram Protocol)
 ***
-Un [[Protocollo]] di rete, viene utilizzato per trasmettere dati nell'insieme di protocolli [[TCP IP]]. 
+Un [[Protocollo]] di rete, viene utilizzato per trasmettere dati nell'insieme di protocolli [[Suite TCP IP]]. 
 
 Lo UDP viene detto "connectionless" perchè a differenza del protocollo [[TCP (Transmission Control Protocol)]] non è pensato per garantire che tutti i dati arrivino al destinatario per intero, non c'è nemmeno un handshake; quello che il client fa è spedire dati uno dopo l'altro senza altre formalità.
 
