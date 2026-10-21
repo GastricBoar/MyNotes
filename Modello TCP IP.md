@@ -6,7 +6,7 @@ tags:
 ---
 # Modello TCP/IP
 ---
-Rappresentazione concettuale che descrive come avviene la comunicazione tra dispositivi attraverso una rete.
+Una rappresentazione concettuale, descrive come avviene la comunicazione tra dispositivi attraverso una rete.
 
 ### Il contesto
 I dispositivi comunicano attraverso le reti, e succedono tante cose quando i dati si muovono da un posto a un altro: bisogna identificare le applicazioni coinvolte, preparare i dati, individuare la destinazione, trasferire le informazioni attraverso i collegamenti di rete etc.
@@ -38,5 +38,27 @@ Gestisce il trasferimento dei dati tra le applicazioni:
 
 - Il protocollo di trasporto usa i numeri di porta per distinguere le comunicazioni e consegnare i dati all'applicazione corretta.
 
+#### Internet
+"Internet" inteso come "tra reti", non come il grande Internet. Si occupa di ndirizzamento IP e di instradare i pacchetti tra reti diverse:
+
+- I dati che il serve vuole mandare al tuo PC vengono inseriti in pacchetti IP, contengono l'indirizzo IP di mittente e destinatario.
+
+- I pacchetti seguono una catena di router, per ogni hop usano l'indirizzo IP di destinazione per trasferirli alla rete corretta.
+
+Permette ai dati di raggiungere la rete di destinazione, ma non garantisce che i pacchetti arrivino a destinazione. Manca ancora un livello.
+
+#### Accesso alla rete
+Trasmette i dati attraverso la rete locale: la scheda di rete del tuo PC riceve i frame, tramite Wi-Fi o cavo Ethernet.
+
+Da qui il giro riparte verso l'alto: 
+
+- La scheda di rete elabora il frame ed estrae il pacchetto IP.
+- Il livello Internet verifica l'indirizzo IP di destinazione.
+- Se destinato al tuo PC, passa al livello trasporto, che utilizza le porte per individuare la comunicazione a cui appartengono i dati.
+- I dati vengono consegnati al protocollo applicativo corrispondente.
+- Li interpreta e li rende disponibili al tuo browser.
+- Tu guardi il video.
 
 ---
+[[Porte di rete]]
+[[Hop]]
