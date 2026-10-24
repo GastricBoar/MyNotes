@@ -20,7 +20,7 @@ Suddivide il processo di comunicazione in quattro livelli, ogni livello raggrupp
 
 Ecco i quattro livelli, e tieni a mente questo esempio: usi il tuo browser per guardare un video su Youtube.
 
-#### Applicazione
+#### Applicazione (Application Layer)
 Definisce le regole e il formato dei messaggi che le applicazioni seguono per comunicare attraverso la rete:
 
 - Apri YouTube e scegli un video. 
@@ -29,7 +29,9 @@ Definisce le regole e il formato dei messaggi che le applicazioni seguono per co
 
 Come vedi, definisce solo le regole con il quale il browser richiede e riceve risorse; non si occupa di trasportare i dati attraverso la rete.
 
-#### Trasporto
+Esempi di protocolli del livello applicazione sono HTTP e DNS.
+
+#### Trasporto (Transport Layer)
 Gestisce il trasferimento dei dati tra le applicazioni:
 
 - Il server di YouTube deve inviare al tuo PC i dati necessari a riprodurre il video.
@@ -38,7 +40,9 @@ Gestisce il trasferimento dei dati tra le applicazioni:
 
 - Il protocollo di trasporto usa i numeri di porta per distinguere le comunicazioni e consegnare i dati all'applicazione corretta.
 
-#### Internet
+Esempi di protocolli del livello trasporto sono TCP e UDP.
+
+#### Internet (Internet Layer)
 "Internet" inteso come "tra reti", non come il grande Internet. Si occupa di ndirizzamento IP e di instradare i pacchetti tra reti diverse:
 
 - I dati che il serve vuole mandare al tuo PC vengono inseriti in pacchetti IP, contengono l'indirizzo IP di mittente e destinatario.
@@ -47,9 +51,14 @@ Gestisce il trasferimento dei dati tra le applicazioni:
 
 Permette ai dati di raggiungere la rete di destinazione, ma non garantisce che i pacchetti arrivino a destinazione. Manca ancora un livello.
 
-#### Accesso alla rete
+Esempi di protocolli del livello Internet sono IP e ICMP.
+
+#### Accesso alla rete (Network Access Layer)
 Trasmette i dati attraverso la rete locale: la scheda di rete del tuo PC riceve i frame, tramite Wi-Fi o cavo Ethernet.
 
+Esempi di protocolli e tecnologie del livello di accesso alla rete sono Ethernet e Wi-Fi.\
+
+### E poi?
 Da qui il giro riparte verso l'alto: 
 
 - La scheda di rete elabora il frame ed estrae il pacchetto IP.
