@@ -10,10 +10,10 @@ tags:
 ---
 La directory di [[Linux]] che contiene file di configurazione del sistema e dei servizi installati.
 
-Nonostante il nome significhi "et cetera", oggi è la directory standard per i file di configurazione del sistema; storicamente però era destinata a contenere file di sistema "vari". 
+### Come funziona?
+Nonostante il nome significhi "et cetera", oggi è la directory standard per i file di configurazione del sistema; storicamente era invece destinata a contenere file di sistema "vari". 
 
-### Alcuni file importanti
-In una tabella:
+Per nominare alcuni file importanti in una tabella:
 
 | File | Descrizione |
 |------|-------------|
@@ -27,8 +27,7 @@ In una tabella:
 | `/etc/ssh/sshd_config` | Configurazione del server OpenSSH. |
 | `/etc/sudoers` | Configurazione dei privilegi di `sudo`. |
 
-### Alcune directory importanti
-Un'altra tabella:
+Per nominare alcune directory importanti in una tabella:
 
 | Directory | Descrizione |
 |-----------|-------------|
