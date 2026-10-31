@@ -24,11 +24,27 @@ Nel pratico lo fanno utilizzando alcune funzionalità del kernel per isolare i p
 
 Puoi creare ambienti isolati manualmente con degli strumenti Linux:
 
-- **unshare:** ti permette di avviare processi con namespaces separati, quindi ognuno vede le sole risorse che gli sono state assegnate.
-- **chroot:** ti permette modificare le directory visibili a un processo, gli fai vedere solo una porzione del filesystem come fosse la radice /.
+- **unshare:** ti permette di avviare processi con namespaces separati, quindi ognuno vede le sole risorse che è stato permesso di vedere.
+- **chroot:** ti permette di modificare la directory visibile a un processo, gli fai vedere solo una porzione del filesystem come fosse la radice /.
 
 ### Strumenti per la gestione di container
+Anziché creare e configurare manualmente ogni container, è conveniente utilizzare strumenti che automatizzano queste operazioni: 
 
+- **Docker:** permette di creare immagini, eseguire container e gestirne il ciclo di vita.
 
+- **Podman:** alternativa a Docker, funziona anche senza privilegi di root o demoni centrali attivi.
+
+- **LXC:** permette di creare e gestire container che si comportano come sistemi Linux completi, con un proprio ambiente di sistema, servizi, utenti e processi; a differenza di Docker e Podman, non è focalizzato sull'esecuzione di una singola applicazione isolata.
+
+### Che differenza fa con una macchina virtuale?
+Riguarda il modo in cui viene virtualizzato il sistema:
+
+- **Le macchine virtuali** utilizzano un hypervisor per virtualizzare l'hardware. Ogni VM esegue un proprio sistema operativo, con un kernel indipendente da quello dell'host.
+
+- **I container** non virtualizzano l'hardware e non hanno bisogno di un proprio kernel. Isolano i processi utilizzando le funzionalità del kernel host, che viene condiviso tra i container.
+
+I container sono più leggeri e veloci da avviare rispetto alle VM, perché non devono eseguire un sistema operativo completo. Le VM, offrono invece un isolamento più forte a livello di sistema operativo e permettono di eseguire sistemi operativi diversi sullo stesso host.
+
+Un container deve essere compatibile con il kernel del sistema host: un container Linux necessita di un kernel Linux, un container Windows necessita di un kernel Windows. Per questo motivo, Docker su Windows usa una macchina virtuale Linux per eseguire container Linux.
 
 ---
