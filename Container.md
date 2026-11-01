@@ -48,3 +48,4 @@ I container sono più leggeri e veloci da avviare rispetto alle VM, perché non 
 Un container deve essere compatibile con il kernel del sistema host: un container Linux necessita di un kernel Linux, un container Windows necessita di un kernel Windows. Per questo motivo, Docker su Windows usa una macchina virtuale Linux per eseguire container Linux.
 
 ---
+[[Dockerfile]]
