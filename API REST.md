@@ -6,6 +6,9 @@ tags:
 ---
 # API REST (Representational State Transfer)
 ---
-Representational State Transfer, un tipo di [[API (Application Programming Interface)]] che utilizza metodi HTTP (es. GET, POST, PUT, DELETE) per scambiare dati tra più sistemi software, solitamente in formato JSON o XML.
+Interfaccia che permette a due applicazioni di comunicare attraverso richieste HTTP, seguendo i principi architetturali REST.
+
+### Come funziona?
+
 
 ---
