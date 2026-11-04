@@ -39,4 +39,4 @@ Per nominare alcune directory importanti in una tabella:
 | `/etc/apt/` | Configurazione di APT (Debian/Ubuntu). |
 
 ---
-[[Filesystem Linux]] | [[/home]] | [[/var]] | [[/usr]]
+[[Struttura del filesystem Linux]] | [[/home]] | [[/var]] | [[/usr]]

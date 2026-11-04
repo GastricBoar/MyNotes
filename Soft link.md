@@ -16,7 +16,6 @@ Su Linux per esempio, un soft link è un file separato con un proprio inode; non
 L’[[Hard link]] è diverso perchè punta direttamente all’inode del file, condividendone i dati.
 
 ---
-
 [[inode (index node)]]  
 [[ls (list)]]
 

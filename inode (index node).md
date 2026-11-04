@@ -12,7 +12,7 @@ Una struttura dati utilizzata dai [[Filesystem]] per rappresentare file in [[Lin
 
 Nel pratico, è un record che:
 
-- identifica il file in maniera univoca all'interno del filesystem (ma solo al suo interno)
+- identifica il file in maniera univoca all'interno del filesystem (ma solo al suo interno, leggi giù)
 - contiene tutte le informazioni su quel file, fatta eccezione per il nome
 
 ### Cosa contiene un inode?
