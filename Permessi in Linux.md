@@ -42,11 +42,11 @@ guarda la stringa dei permessi a inizio riga, è composta da 10 caratteri:
 ### Read, write e execute
 Tre permessi che ti permettono di stabilire regole, lo fanno in modo diverso per file o directory:
 
-- **con read (r) leggi:** su un file ne leggi il contenuto; su una directory ne listi i file, ma senza `x` non puoi entrare in directory
+- **con read (r) leggi:** su un file ne leggi il contenuto; su una directory ne elenchi i file, ma senza `x` non puoi entrare in directory.
   
-- **con write (w) scrivi:** su un file ne modifichi il contenuto; su una directory crei ed elimini file
+- **con write (w) scrivi:** su un file ne modifichi il contenuto; su una directory crei ed elimini file.
 
-- **con execute (x) esegui:** su un file lo esegui (es. uno script); su una directory ci entri dentro (con `cd`) ma senza `r` non puoi vedere cosa contiene, se conosci già il nome di un file puoi comunque accedervi (es. `cat dir/file.txt`)
+- **con execute (x) esegui:** su un file lo esegui (es. uno script); su una directory ci entri dentro (con `cd`) ma senza `r` non puoi vedere cosa contiene, se conosci già il nome di un file puoi comunque accedervi (es. `cat dir/file.txt`).
 
 ### Permessi in formato simbolico
 Puoi rappresentare i permessi Linux in formato simbolico, quindi:
