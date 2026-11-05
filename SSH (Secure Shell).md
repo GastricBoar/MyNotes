@@ -7,7 +7,7 @@ tags:
 ---
 # SSH (Secure Shell)
 ---
-Protocollo di rete applicativo che consente di accedere e gestire da remoto computer o apparati di rete tramite riga di comando, in modo completamente cifrato e sicuro; utilizza di default la porta TCP 22.
+Protocollo di rete applicativo che consente di accedere e gestire sistemi remoti tramite riga di comando, in maniera cifrata e sicura; utilizza di default la porta TCP 22.
 
 È nato per sostituire i vecchi protocolli non protetti come Telnet, rlogin e FTP.
 
@@ -27,7 +27,7 @@ L'autenticazione avviene tramite password oppure tramite coppia di chiavi critto
 - Da quel momento in poi, connettersi in ssh non richiederà alcuna password, perchè il tuo PC ti autentica tramite controllo crittografico.
 
 ### Funzionalità aggiuntive
-Oltre all'accesso alla riga di comando, SSH tioffre diverse funzionalità avanzate:
+Oltre all'accesso alla riga di comando, SSH ti offre diverse funzionalità avanzate:
 
 - **Trasferimento file sicuro:** supporta i protocolli SFTP e SCP per copiare file in modo cifrato tra due host.
 

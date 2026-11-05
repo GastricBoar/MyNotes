@@ -142,24 +142,28 @@ Contiene software aggiuntivo installato al di fuori della normale organizzazione
 Le applicazioni di terze parti sono spesso installate in `/opt/google/chrome`.
 
 #### `/proc` (Process and kernel information)
-È un filesystem virtuale che espone informazioni su processi e kernel. Quando dico "filesystem virtuale" intendo questo:
+È un filesystem virtuale che espone informazioni sui processi in esecuzione e sullo stato delle risorse gestite dal kernel. Quando dico "filesystem virtuale" intendo che:
 
 - Normalmente, quando apri un file, leggi informazioni che qualcuno ha già salvato a disco.
   
-- `/proc` funziona diversamente, perchè è una finestra su informazioni che il kernel raccoglie.
+- Le informazioni di cui abbiamo parlato sopra sono presentate sotto forma di file e directory, come un filesystem normale, ma sono generate dinamicamente dal kernel invece che archiviate a disco.
   
-- Un kernel accumula e mantiene informazioni su processi, CPU, memoria e altro; `/proc` ti permette di interrogare quelle informazioni; per esempio, se lanci `cat /proc/meminfo` ti ritrovi informazioni sulla memoria del sistema.
-
-- Le informazioni di cui parliamo sono presentate sotto forma di file e directory, come un filesystem normale, ma sono generate dinamicamente dal kernel invece che archiviate a disco.
+Un kernel accumula e mantiene informazioni sullo stato di processi, CPU, memoria e altro; `/proc` è una finestra su queste informazioni, e ti permette di interrogarle; per esempio, se lanci `cat /proc/meminfo` ti ritrovi informazioni sull'utilizzo della RAM.
   
-Per citare un paio di esempi:
-
-- `/proc/cpuinfo`: informazioni sulla CPU.
-- `/proc/meminfo`: informazioni sulla memoria.
+Per citare qualche altro esempio:
+- `/proc/cpuinfo`: informazioni sullo stato della CPU.
 - `/proc/1234`: informazioni sul processo con PID 1234.
 - `/proc/uptime`: tempo trascorso dall'avvio del sistema.
 
-È particolarmente utile per monitoraggio del sistema e troubleshooting.
+È particolarmente utile per monitoraggio del sistema e troubleshooting, e non è da confondere con `/sys`:
+
+- Entrambi espongono informazioni del kernel.
+  
+- `/proc` espone principalmente informazioni sullo stato del sistema e dei processi, risponde alla domanda "cosa sta succedendo adesso nel sistema?".
+  
+- `/sys` espone informazioni su dispositivi hardware, driver e la loro gestione da parte del kernel, risponde alla domanda "quali dispositivi son presenti e come vengono gestiti?".
+
+Ci sono delle aree di sovrapposizione, non è una separazione assoluta.
 
 #### `/run` (Runtime data)
 Contiene informazioni temporanee che programmi e servizi hanno bisogno di conservare durante il loro funzionamento (appunto, il runtime).
@@ -170,30 +174,42 @@ Facendo un esempio:
 
 - È qui che entra in gioco `/run`, le informazioni possono essere salvate in `/run/sshd`.
   
-- I file di cui parliamo vengono scritti in memoria, non su disco, tramite un filesystem chiamato `tempfs`.
+- I file di cui parliamo vengono scritti in memoria, non su disco, tramite un filesystem virtuale chiamato `tempfs`.
 
 Per dirne qualcun'altra:
 
 - `/run/systemd`: sono dati utilizzati da systemd.
 - `/run/user/1000`: sono dati runtime della sessione dell'utente con UID 1000.
 
-#### `/srv` (Service data)
-Contiene dati forniti dai servizi ospitati dal sistema.
+#### `/srv` (Serve data)
+Contiene i dati che i servizi mettono a disposizione (appunto "servono") di altri computer e utenti in rete.
 
-Ad esempio, un server web potrebbe conservare i contenuti di un sito in `/srv/www`, mentre un server FTP potrebbe utilizzare `/srv/ftp`.
+Per fare un esempio: un web server potrebbe conservare i contenuti di un sito in `/srv/www`, mentre un server FTP potrebbe conservarli `/srv/ftp`.
 
-L'obiettivo è mantenere separati i dati forniti dai servizi rispetto ai file di configurazione e ai programmi che li gestiscono.
+L'obiettivo è separare:
+- I dati che un servizio fornisce ad altri computer e utenti.
+- Dai file di configurazione del servizio in sè.
 
 ### `/sys` (Kernel and device information)
-È un filesystem virtuale, chiamato `sysfs`, che espone informazioni sui dispositivi hardware, sui driver e sulle strutture interne del kernel.
+Utilizzato dal kernel per esporre informazioni su dispositivi hardware, driver e la loro gestione.
 
-Ad esempio:
+Come visto in `/proc` e `/run`, anche questa directory usa filesystem virtuale per immagazzinare dati, si chiama `sysfs`.
+
+Un paio di esempi:
 
 - `/sys/class/net`: informazioni sulle interfacce di rete.
 - `/sys/block`: informazioni sui dispositivi a blocchi.
-- `/sys/devices`: struttura gerarchica dei dispositivi rilevati dal kernel.
+- `/sys/devices`: struttura ad albero dei dispositivi rilevati dal kernel.
 
-È utilizzato dal kernel e dagli strumenti di amministrazione per esporre e gestire informazioni relative all'hardware e ai dispositivi.
+Per come dicevamo prima, non è da confondere con `/proc`:
+
+- Entrambi espongono informazioni del kernel.
+  
+- `/proc` espone principalmente informazioni sullo stato del sistema e dei processi, risponde alla domanda "cosa sta succedendo adesso nel sistema?".
+  
+- `/sys` espone informazioni su dispositivi hardware, driver e la loro gestione da parte del kernel, risponde alla domanda "quali dispositivi son presenti e come vengono gestiti?".
+
+Ci sono delle aree di sovrapposizione, non è una separazione assoluta.
 
 ### `/tmp` (Temporary files)
 Contiene file temporanei creati dalle applicazioni e dagli utenti durante il funzionamento del sistema.
@@ -205,29 +221,40 @@ I file presenti in questa directory possono essere eliminati automaticamente dur
 Non bisogna quindi considerarla una posizione adatta alla conservazione permanente dei dati.
 
 ### `/usr` (User system resources)
-Contiene la maggior parte dei programmi, delle librerie e dei dati condivisi installati nel sistema. Nonostante il nome, non è una directory destinata ai file personali degli utenti.
+Contiene la maggior parte dei programmi e delle librerie installati a sistema. Nonostante il nome, non è una directory destinata ai file personali degli utenti.
 
-Alcune directory importanti al suo interno:
+Per capire meglio, alcune directory importanti al suo interno:
 
-- `/usr/bin`: programmi e comandi utilizzabili dagli utenti.
-- `/usr/sbin`: strumenti amministrativi.
-- `/usr/lib`: librerie e componenti software.
-- `/usr/share`: dati indipendenti dall'architettura, come documentazione e file condivisi.
-- `/usr/local`: software installato localmente dall'amministratore, al di fuori della gestione ordinaria della distribuzione.
+- `/usr/bin`: contiene la maggior parte dei programmi e dei comandi utilizzabili dagli utenti.
+  
+- `/usr/sbin`: contiene gli strumenti amministrativi.
+  
+- `/usr/lib`: contiene librerie e componenti condivise utilizzati dai programmi, parliamo di codice qui.
+  
+- `/usr/share`: contiene risorse dei programmi che a differenza di `/lib` non sono codice eseguibile; cose come documentazione, icone, traduzioni, template e altro.
+  
+- `/usr/local`: contiene il software installato localmente dall'amministratore, quello al di fuori della gestione ordinaria dei pacchetti della distribuzione.
 
-È una delle directory principali del sistema, perché contiene gran parte del software installato.
+Fai attenzione, perchè nelle distribuzioni Linux moderne che adottano il modello usr-merge, le directory storicamente separate come `/bin`, `/sbin` e `/lib` sono diventate collegamenti simbolici verso le rispettive directory sotto `/usr`: `/bin` diventa `/usr/bin`, `/sbin` diventa `/usr/sbin`,  `/lib` diventa `/usr/lib` e così via.
+
+Con i link simbolici, i file sono fisicamente organizzati sotto `/usr`, ma i vecchi percorsi continuano comunque a funzionare per compatibilità.
 
 ### `/var` (Variable data)
-Contiene dati che cambiano frequentemente durante il funzionamento del sistema, a differenza di quelli generalmente statici presenti in `/usr`.
+Contiene dati che cambiano frequentemente durante il funzionamento di sistema e servizi, appunto dati variabili. 
 
-Alcune directory importanti al suo interno:
+Attenzione che parliamo di dati variabili, non per forza temporanei: a differenza dei dati generalmente statici di programmi e file di configurazione, questi dati cambiano frequentemente perchè creati e aggiornati in continuazione durante l'esecuzione del sistema.
+
+Alcune directory importanti:
 
 - `/var/log`: log del sistema e dei servizi.
+  
 - `/var/cache`: dati temporanei utilizzati dalle applicazioni.
-- `/var/lib`: dati persistenti utilizzati dai servizi e dalle applicazioni.
+  
+- `/var/lib`: dati persistenti utilizzati dai servizi e dalle applicazioni, es. il database di un'applicazione può essere conservato qui; come dicevamo su, è il perfetto esempio di un dato variabile ma non temporaneo.
+  
 - `/var/spool`: dati in attesa di elaborazione, come code di stampa e posta.
 
-È particolarmente importante per il troubleshooting e la manutenzione: ad esempio, analizzando `/var/log` è possibile individuare errori e problemi relativi al funzionamento dei servizi.
+È una directory importante per troubleshooting e manutenzione: ad esempio, analizzando `/var/log` è possibile individuare errori e problemi relativi al funzionamento dei servizi.
 
 ---
 [[Mount points in Linux]]
@@ -235,3 +262,7 @@ Alcune directory importanti al suo interno:
 [[Soft link]]
 [[Hard link]]
 [[Everything is a file]]
+[[etc (Et Cetera)]]
+[[/var]]
+[[/usr]]
+[[/usr]]
