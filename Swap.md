@@ -22,16 +22,16 @@ Per fare un esempio:
 
 Non devi pensarla come "RAM aggiuntiva" (lo swap è assai più lento della RAM) ma come un meccanismo di sicurezza temporaneo.
 
-### **Come viene creato lo swap?**
+### Come viene creato lo swap?
 Dipende da cosa vuoi usare per delimitare lo spazio su disco allocato allo swap.
 
-### **La swap partition**
+### La swap partition
 Una partizione usata come spazio di swap: si trova fuori dal [[Filesystem]] ed è composta da blocchi grezzi su disco.
 
 Come approccio non è molto flessibile: ridimensionarla è complesso perchè devi partizionare il disco.
 
-### **Lo swap file**
-Un file formattato come area di swap. È davvero un file, però a differenza di altri file, ci sta di mezzoun trucco software, il [[Kernel]] fa questo:
+### Lo swap file
+Un file formattato come area di swap. È davvero un file, però a differenza di altri file, ci sta di mezzo un trucco software, il [[Kernel]] fa questo:
 
 1. Ottiene la mappatura dei blocchi fisici occupati dal file sul disco.
 2. Bypassa il filesystem.
@@ -39,7 +39,7 @@ Un file formattato come area di swap. È davvero un file, però a differenza di 
 
 In questo caso l'area di swap vive dentro al filesystem, ed è un approccio più flessibile della swap partition perchè se vuoi ridimensionare l'area di swap non devi partizionare nulla, puoi scalare facilmente.
 
-### **Lo swap esiste in Windows?**
+### Lo swap esiste in Windows?
 Sì, ma lì si chiama [[Page File]].
 
 ---
