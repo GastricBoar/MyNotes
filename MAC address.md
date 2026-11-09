@@ -19,7 +19,8 @@ Ha un dimensione di 48 bit, ed è composto da 6 gruppi di due cifre esadecimali:
 
 È diviso in due gruppi di cifre:
 
-- **OUI (Organizationally Unique Identifier)**: i primi 24 bit, assegnati dallo standard IEEE; identificano il produttore della scheda di rete.
+- **OUI (Organizationally Unique Identifier)**: i primi 24 bit (quindi 3 byte), assegnati dallo standard IEEE; identificano il produttore della scheda di rete. Se vuoi risalire a quel produttore, lancia `curl -s "https://api.macvendors.com/48:A9:8A"` e sostituisci l'ultimo pezzo con i 3 byte che ha il MAC da verificare.
+  
 - **Identificatore NIC (Network Interface Controller):** gli ultimi 24 bit, sono assegnati dal produttore e distinguono ogni dispositivo prodotto.
 
 Gli indirizzi MAC dovrebbero essere unici a livello globale.

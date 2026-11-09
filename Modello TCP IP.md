@@ -56,7 +56,7 @@ Esempi di protocolli del livello Internet sono IP e ICMP.
 #### Accesso alla rete (Network Access Layer)
 Trasmette i dati attraverso la rete locale: la scheda di rete del tuo PC riceve i frame, tramite Wi-Fi o cavo Ethernet.
 
-Esempi di protocolli e tecnologie del livello di accesso alla rete sono Ethernet e Wi-Fi.\
+Esempi di protocolli e tecnologie del livello di accesso alla rete sono Ethernet e Wi-Fi.
 
 ### E poi?
 Da qui il giro riparte verso l'alto: 

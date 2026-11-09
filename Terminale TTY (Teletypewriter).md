@@ -5,7 +5,7 @@ tags:
   - pubblico
   - linux
 ---
-# Terminale TTY (Teletypewriter)
+# TTY (Teletypewriter)
 ---
 Interfaccia testuale che permette all'utente di interagire con il sistema operativo tramite comandi, senza utilizzare un'interfaccia grafica.
 

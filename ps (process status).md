@@ -82,4 +82,4 @@ Lanceresti `ps aux --sort=-%mem | head`
 L'intenzione è quella di mantenere compatibilità con sistemi vecchissimi, per quei sysadmin che li usano; `ps` è un dinosauro UNIX.
 
 ---
-[[TTY (Teletypewriter)]]
+[[Terminale TTY (Teletypewriter)]]
