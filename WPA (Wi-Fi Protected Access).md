@@ -52,7 +52,7 @@ Negli anni la sicurezza Wi-Fi è stata aggiornata con nuove generazioni:
 Il primo membro della famiglia WPA ad utilizzare lo standard [[AES (Advanced Encryption Standard)]] per la crittografia dei dati. È stato un grosso passo in avanti, l'hardware delle schede di rete necessitava di chip dedicati alla crittografia pesante, e quegli anni prima di WPA2 hanno dato tempo al mercato hardware per adeguarsi. 
 
 ### WPA3
-Introduce l'implementazione  Wi-Fi Enhanced Open (OWE), che cifra e protegge anche le reti pubbliche senza password o autenticazione. Inoltre, grazie al protocollo SAE (Simultaneous Authentication of Equals) e alla Forward Secrecy, blocca gli attacchi offline alla password e impedisce di decifrare il traffico passato anche se la chiave dovesse essere scoperta in seguito. Completa il quadro una modalità a 192 bit, che offre una cifratura opzionale di livello militare pensata per contesti ad altissima sicurezza.
+Introduce l'implementazione Wi-Fi Enhanced Open (OWE), che cifra e protegge anche le reti pubbliche senza password o autenticazione. Inoltre, grazie al protocollo SAE (Simultaneous Authentication of Equals) e alla Forward Secrecy, blocca gli attacchi offline alla password e impedisce di decifrare il traffico passato anche se la chiave dovesse essere scoperta in seguito. Completa il quadro una modalità a 192 bit, che offre una cifratura opzionale di livello militare pensata per contesti ad altissima sicurezza.
 
 
 ---
