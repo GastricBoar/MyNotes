@@ -6,38 +6,54 @@ tags:
 
 ---
 # DHCP (Dynamic Host Configuration Protocol)
-***
-Un protocollo di rete che assegna automaticamente [[Indirizzo IP (Internet Protocol)]] e altre configurazioni ai dispositivi in una rete [[LAN (Local Area Network)]].
+---
+Protocollo di rete che assegna automaticamente indirizzo IP e altre configurazioni a un dispositivo in rete.
 
-Come già sai, un dispositivo senza indirizzo IP non riuscirebbe a comunicare con nessun altro all'interno di una rete; un indirizzo IP è necessario.
+### Il contesto
+Un dispositivo ha bisogno di alcune informazioni per poter comunicare con gli altri dispositivi in rete o raggiungere Internet:
 
-###### **"Ma io non ricordo mica di aver assegnato un indirizzo IP a nessuno dei miei dispositivi."** 
-Ma io gnognegnegne- grande minchione, non lo hai mai dovuto assegnare manualmente perchè il DHCP lo ha fatto per te. Ecco cosa devi sapere:
+- **Indirizzo IP:** identifica il dispositivo all'interno della rete.
 
-1. Il DHCP è gestito da un server DHCP.
-2. Nel momento in cui un dispositivo (che chiamiamo DHCP client) si connette alla rete, invia una sorta di segnale o chiamata; è come se urlasse a tutti "mi serve un indirizzo IP, presto!".
-3. Il server DHCP risponde, gli assegna un indirizzo IP, una [[Subnet mask]] e un default gateway; queste sono le cose di cui ha bisogno per poter comunicare correttamente con gli altri dispositivi in rete.
+- **Subnet mask:** definisce quale parte dell'indirizzo IP identifica la rete e quale identifica il dispositivo, es. se hai IP `192.168.1.100` e subnet mask `255.255.255.0`, la rete è `192.168.1.0` e l'indirizzo del dispositivo è `192.168.1.100`.
+
+- **Default gateway:** indica a quale router inoltrare il traffico destinato a reti diverse da quella locale.
+
+- **DNS server:** traduce i nomi di dominio (come `google.com`) in rispettivi indirizzi IP.
+
+Queste informazioni puoi configurarle manualmente sul tuo dispositivo; tu penserai "ma io non ricordo mica di aver assegnato un indirizzo IP a nessuno dei miei dispositiv-" ma io gnognegnegne- grande minchione, non lo hai mai dovuto assegnare perchè qualcos'altro lo ha fatto per te, e quel qualcosa si chiama "server DHCP".
+
+### Come funziona?
+Un dispositivo svolge il ruolo DHCP, generalmente si tratta di un router o un server. Il dispositivo che ricopre quest ruolo mette a disposizione una configurazione di rete e la assegna ai dispositivi (i client DHCP) che ne fanno richiesta.
+
+Nel pratico avviene in quattro passaggi, conosciuti con l'acronimo DORA:
+
+1. **Discover:** il client cerca un server DHCP in rete.
+
+2. **Offer:** il server risponde proponendo una configurazione di rete.
+
+3. **Request:** il dispositivo richiede formalmente la configurazione proposta.
+
+4. **Acknowledge:** il server conferma l'assegnazione e concede al dispositivo l'utilizzo della configurazione per un determinato periodo di tempo, chiamato lease time.
 
 Immagina se questo meccanismo non esistesse: per collegarti al Wi-Fi della biblioteca dovresti presentarti davanti alla biblotecaria e chiederle "mi ferve fapere il mio indirizzo IP, la mia fubnet mafk e un default gateway".
 
-###### **"Ok, ma dove sta questo server DHCP? non mi sembra di averne uno in casa."** 
-Invece ce l'hai, in una rete domestica fa spesso parte del router ([[SOHO router (Small Office Home Office)]]) che ti è stato affidato dal tuo gestore telefonico. Ricorda che essendo a tutti gli effetti un server, il server DHCP ha un suo indirizzo IP.
-###### **"Come verifico l'indirizzo IP del DHCP server al quale sono collegato?"** 
-Apri il CMD, scrivici dentro `ipconfig /all` e scorri in basso alla scheda di rete che stai utilizzando; in quella scheda troverai l'indirizzo IP del server DHCP al quale sei collegato:
+Se vuoi verificare il server DHCP al quale sei collegato apri il CMD, scrivici dentro `ipconfig /all` e scorri in basso alla scheda di rete che stai utilizzando; lì trovi l'indirizzo IP del server DHCP al quale sei collegato:
 
-![Pasted image 20241226004521.png](Utilities/Media/Pasted%20image%2020241226004521.png)
+<img src="Utilities/Media/Pasted%20image%2020241226004521.png" alt="Pasted image 20241226004521.png" width="577">
 
-###### **"Cosa succede se il mio server DHCP va giù?"** 
-Il tuo dispositivo prende un indirizzo IP privato tramite [[APIPA (Automatic Private IP Addressing)]]; risolvi così: [[Risolvere problemi legati al server DHCP]].
+Un server DHCP lo configuri con una serie di parametri:
 
-###### **Il DHCP range** 
-L'intervallo di indirizzi assegnabili dal server. Potremmo configurare il DHCP in modo da assegnare ai dispositivi nella nostra rete un indirizzo IP qualsiasi compreso nel range 192.168.1.100 - 192.168.1.200
-###### **Il DHCP lease** 
-Il periodo di tempo entro il quale un indirizzo IP assegnato dal server DHCP rimane valido per un dispositivo. Prima della sua scadenza, il dispositivo tenta di rinnovare il lease; se non ci riesce, l'indirizzo torna al pool diventando disponibile per gli altri dispositivi in [[LAN (Local Area Network)]].
-###### **Le DHCP reservations** 
-Una configurazione che permette di assegnare permanentemente un indirizzo IP a un dispositivo in rete, all'interno di un pool di indirizzi dinamici. Può essere utile per i dispositivi che torna utile abbiano un indirizzo statico (come stampanti, servers, telecamere); in molti casi però non ha senso riservare un indirizzo all'interno del DHCP range, sarebbe meglio non riservarlo e tenerlo del tutto al di fuori del range. 
+- **Il DHCP range:** l'intervallo di indirizzi assegnabili dal server, es. assegna ai dispositivi indirizzi compresi nel range 192.168.1.100 - 192.168.1.200.
 
-Per fare un esempio: DHCP range 192.168.1.100 - 192.168.1.200, router sull'1, stampante sul 2, telecamera sul 3 e così via.
+- **Il DHCP address:** specifica a quale rete applicare le impostazioni DHCP; un server DHCP potrebbe gestire più reti con parametri differenti, es. hai una rete 192.168.1.0/24 per i computer e una rete 192.168.2.0/24 per i dispositivi IoT, assegnando a ciascuna un gateway e un DNS differenti.
+
+- **Il DHCP lease:** il periodo di tempo entro il quale un indirizzo assegnato resta valido per un certo client. Prima della scadenza, quel dispositivo tenta di rinnovare il lease; se non ci riesce, l'indirizzo torna al pool diventando disponibile per gli altri dispositivi in rete.
+
+- **Le DHCP reservations:** assegni permanentemente un indirizzo IP a un certo client, nonostante quell'indirizzo faccia parte del pool di indirizzi dinamici. È utile assegnare un indirizzo statico a dispositivi come stampanti, server e telecamere; in molti casi però non ha senso riservare un indirizzo all'interno del DHCP range, sarebbe meglio non riservarlo e tenerlo del tutto al di fuori del range, es. DHCP range 192.168.1.100 - 192.168.1.200, router sull'1, stampante sul 2, telecamera sul 3 e così via.
+
+Se il tuo server DHCP va giù, i client prendono un indirizzo IP privato tramite APIPA.
 
 ***
-
+[[APIPA (Automatic Private IP Addressing)]]
+[[LAN (Local Area Network)]]
+[[Risolvere problemi legati al server DHCP]]
